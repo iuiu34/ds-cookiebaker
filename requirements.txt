@@ -1,0 +1,10 @@
+# Global dependencies of the project
+fire
+streamlit
+cryptography
+openai
+
+# edo dependencies
+ds-mkt-utils-bq
+ds-mkt-utils-ml
+ds-create-wrapper-components

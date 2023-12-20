@@ -1,0 +1,32 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: ds-app
+spec:
+  template:
+    spec:
+      containers:
+      - image: europe-docker.pkg.dev/edo/app/ds-app:v0.0.14
+        env:
+        - name: BUCKET
+          value: gs://ds-app
+        - name: PROJECT
+          value: edo
+        - name: CLOUD_RUN
+          value: "True"
+        - name: ENVIRONMENT
+          value: PROD
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            cpu: "4"
+            memory: "8Gi"
+          limits:
+            cpu: "4"
+            memory: "8Gi"
+#        volumeMounts:
+#        - name: bucket
+#          mountPath: /bucket
+
+# IAM & Admin > Identity-Aware Proxy

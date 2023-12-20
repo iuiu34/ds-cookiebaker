@@ -1,0 +1,7 @@
+# Local dependencies of the project
+kfp==2.0.1
+
+# edo dependencies
+# edo-ml-plumber
+ds-kfp-local
+ds-dagger-local

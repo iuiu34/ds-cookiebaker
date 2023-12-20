@@ -1,0 +1,55 @@
+max_trial_count: 4
+parallel_trial_count: 2
+study_spec:
+  metrics:
+  - metric_id: roc_auc_ovr_weighted
+    goal: "MAXIMIZE"
+
+  parameters:
+  - parameter_id: learning-rate
+    double_value_spec:
+      min_value: 1.0e-07
+      max_value: 1
+    scale_type: UNIT_LOG_SCALE
+  - parameter_id: max-depth
+    integer_value_spec:
+      min_value: 3
+      max_value: 10
+    scale_type: UNIT_LINEAR_SCALE
+  - parameter_id: colsample-bytree
+    double_value_spec:
+      min_value: 0.6
+      max_value: 1
+    scale_type: UNIT_LOG_SCALE
+  - parameter_id: reg-lambda
+    double_value_spec:
+      min_value: 0.001
+      max_value: 10
+    scale_type: UNIT_LOG_SCALE
+  - parameter_id: n-estimators
+    integer_value_spec:
+      min_value: 200
+      max_value: 500
+    scale_type: UNIT_LINEAR_SCALE
+  - parameter_id: subsample
+    double_value_spec:
+      min_value: 0.6
+      max_value: 1
+    scale_type: UNIT_LINEAR_SCALE
+  - parameter_id: early-stopping-rounds
+    integer_value_spec:
+      min_value: 5
+      max_value: 50
+    scale_type: UNIT_LINEAR_SCALE
+#  - parameter_id: tree_method
+#    categorical_value_spec:
+#      values: "hist"
+
+trial_job_spec:
+  worker_pool_specs:
+#  - container_spec:
+  - machine_spec:
+#      accelerator_count: 1 # shall we use gpu?
+#      accelerator_type: "NVIDIA_TESLA_K80"
+#      machine_type: e2-standard-2
+    replica_count: 1

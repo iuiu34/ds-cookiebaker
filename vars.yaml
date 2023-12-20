@@ -1,0 +1,7 @@
+name: "ds-cookiecutter-sync"
+project: "ds-mkt"
+project_sql: 'ds-mkt'
+dataset: "ds_mkt_cookiecutter_sync"
+version: "0.0.1"
+#output_path: f'gs://{name}'
+#base_image: f"{hostname}/{project}/{name}:{version}"

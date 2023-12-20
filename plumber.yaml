@@ -1,0 +1,2 @@
+project: ds-cookiecutter-sync
+pipeline_func: edo.cookiecutter_sync.train_me.pipeline.cookiecutter_sync_pipeline

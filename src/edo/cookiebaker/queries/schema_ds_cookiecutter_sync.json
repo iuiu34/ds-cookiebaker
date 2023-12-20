@@ -1,0 +1,17 @@
+ [
+      {
+        "mode": "NULLABLE",
+        "name": "BOOKING_ID",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "BOOKING_DATE",
+        "type": "TIMESTAMP"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "MODEL_PRED",
+        "type": "FLOAT"
+      }
+ ]

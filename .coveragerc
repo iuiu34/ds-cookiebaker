@@ -1,0 +1,6 @@
+[run]
+branch = True
+omit = ds-cookiecutter-sync/tests/*
+
+[report]
+fail_under=5

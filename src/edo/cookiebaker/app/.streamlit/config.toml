@@ -1,0 +1,14 @@
+[theme]
+primaryColor = "green"
+#backgroundColor = "#f4f9ff"
+#backgroundColor = "#FFFFFF"
+
+#secondaryBackgroundColor = "#a1b4d9ff"
+#secondaryBackgroundColor = "#293273ff"
+
+#textColor = "#000000"
+#font = "serif"
+
+#[client]
+#showErrorDetails = false
+#toolbarMode = "minimal"
